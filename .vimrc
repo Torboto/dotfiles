@@ -26,7 +26,8 @@ set listchars=tab:▸\ ,eol:¬
 
 set colorcolumn=85
 
-
+inoremap kj <esc>
+inoremap jk <esc>
 
 nnoremap <leader>w <C-w>v<C-w>l
 
