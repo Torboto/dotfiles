@@ -14,12 +14,17 @@ set hls ic laststatus =2
 set ic
 set ignorecase
 set smartcase
+set wildmode=longest,list
+set wildmenu
 nnoremap <tab> %
 vnoremap <tab> %
 set wrap
 set textwidth=79
 set formatoptions=qrn1
 set clipboard=unnamed
+
+inoremap kj <esc>
+inoremap jk <esc>
 
 "Set invisible characters
 set list
@@ -34,10 +39,6 @@ execute pathogen#infect()
 let g:session_autosave = 'yes'
 let g:session_autoload = 'yes'
 
-inoremap kj <esc>
-inoremap jk <esc>
-
-nnoremap <leader>w <C-w>v<C-w>l
 
 nnoremap <leader>w <C-w>v<C-w>l
 
@@ -45,6 +46,3 @@ nnoremap <leader>w <C-w>v<C-w>l
 "autocmd vimenter * NERDTree
 "Map Ctrl+n to NerdTree
 map <C-n> :NERDTreeToggle<CR>
-
-set wildmode=longest,list
-set wildmenu
