@@ -39,7 +39,7 @@ execute pathogen#infect()
 let g:session_autosave = 'yes'
 let g:session_autoload = 'yes'
 
-
+"Shortcuts for spliiting screen Ctrl-w Ctrl-v/l
 nnoremap <leader>w <C-w>v<C-w>l
 
 "Launch NerdTree automatically
