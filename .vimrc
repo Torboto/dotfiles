@@ -1,7 +1,7 @@
 filetype plugin indent on
 set background=dark
 
-colorscheme molokai
+colorscheme molokai_losh
 
 syntax enable
 set bs=2
@@ -19,12 +19,20 @@ vnoremap <tab> %
 set wrap
 set textwidth=79
 set formatoptions=qrn1
+set clipboard=unnamed
 
 "Set invisible characters
 set list
-set listchars=tab:▸\ ,eol:¬
+"set listchars=tab:▸\ ,eol:¬
 
 set colorcolumn=85
+
+"Pathogen
+execute pathogen#infect()
+
+"Persistent session
+let g:session_autosave = 'yes'
+let g:session_autoload = 'yes'
 
 inoremap kj <esc>
 inoremap jk <esc>
@@ -33,8 +41,10 @@ nnoremap <leader>w <C-w>v<C-w>l
 
 nnoremap <leader>w <C-w>v<C-w>l
 
-"Map F2 to NerdTree
-map <F2> :NERDTreeToggle<CR>
+"Launch NerdTree automatically
+"autocmd vimenter * NERDTree
+"Map Ctrl+n to NerdTree
+map <C-n> :NERDTreeToggle<CR>
 
 set wildmode=longest,list
 set wildmenu
