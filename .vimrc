@@ -1,7 +1,7 @@
 filetype plugin indent on
 set background=dark
 
-colorscheme molokai_losh
+colorscheme molokai
 
 syntax enable
 set bs=2
@@ -14,8 +14,6 @@ set hls ic laststatus =2
 set ic
 set ignorecase
 set smartcase
-set wildmode=longest,list
-set wildmenu
 nnoremap <tab> %
 vnoremap <tab> %
 set wrap
@@ -23,26 +21,35 @@ set textwidth=79
 set formatoptions=qrn1
 set clipboard=unnamed
 
-inoremap kj <esc>
-inoremap jk <esc>
+set wildmode=longest,list
+set wildmenu
 
 "Set invisible characters
 set list
-"set listchars=tab:▸\ ,eol:¬
 
+set undofile
 set colorcolumn=85
+set relativenumber
 
 "Pathogen
 execute pathogen#infect()
 
 "Persistent session
-let g:session_autosave = 'yes'
-let g:session_autoload = 'yes'
+let g:session_autosave = 1
+let g:session_autoload = 1
+let g:session_autosave_periodic = 1
 
-"Shortcuts for spliiting screen Ctrl-w Ctrl-v/l
+inoremap kj <esc>
+inoremap jk <esc>
+
+nnoremap <leader>w <C-w>v<C-w>l
+
 nnoremap <leader>w <C-w>v<C-w>l
 
 "Launch NerdTree automatically
 "autocmd vimenter * NERDTree
 "Map Ctrl+n to NerdTree
 map <C-n> :NERDTreeToggle<CR>
+
+"Set notes.vim save locations
+let g:notes_directories = ['~/Documents/notes', '~/Dropbox/notes']
