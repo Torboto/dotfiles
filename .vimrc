@@ -26,6 +26,7 @@ set wildmenu
 
 "Set invisible characters
 set list
+set listchars=tab:>\ 
 
 set undofile
 set colorcolumn=85
